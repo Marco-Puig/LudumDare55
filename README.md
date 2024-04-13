@@ -4,7 +4,7 @@
 S-Pull is a top down horde mode game where you can place 'summons' by using your mana that is built up from surviving.
 This was written all in C, using the raylib core and math libraries.
 
-## Gameplay Preview
+## Gameplay Preview [5 Hours into LD55]
 ![prog](https://github.com/Marco-Puig/LudumDare55/assets/90495366/504f13db-f67a-4546-b303-b9fdd3f9c854)
 
 ## Music
