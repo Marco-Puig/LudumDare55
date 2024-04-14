@@ -5,7 +5,7 @@ S-Pull is a top down horde mode game where you can place 'summons' by using your
 This was written all in C, using the raylib core and math libraries.
 
 ## Gameplay Preview
-![prog](https://github.com/Marco-Puig/LudumDare55/assets/90495366/53c775da-b0ea-4204-ac53-f89e415ac6c5)
+![download](https://github.com/Marco-Puig/LudumDare55/assets/90495366/d4c6c82b-afc7-479a-8ce5-d7e135e637a0)
 
 ## Music
 https://www.youtube.com/watch?v=8l3r1g3l1J8
