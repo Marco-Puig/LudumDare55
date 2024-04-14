@@ -175,8 +175,8 @@ int main(void)
                for (int i = 0; i < MAX_ENEMIES; i++) {
                     if (enemies[i].active) {
                         // Simple AI to follow the player
-                        enemies[i].position.x = Lerp(enemies[i].position.x, playerPos.x, (0.005 * r) + 0.005);
-                        enemies[i].position.y = Lerp(enemies[i].position.y, playerPos.y + (30 * r), (0.005 * r) + 0.005);
+                        enemies[i].position.x = Lerp(enemies[i].position.x, playerPos.x + (50 * r), (0.005 * r) + 0.005);
+                        enemies[i].position.y = Lerp(enemies[i].position.y, playerPos.y + (50 * r), (0.005 * r) + 0.005);
                     }
                 }
                                 
@@ -194,8 +194,20 @@ int main(void)
                     for (int i = 0; i < MAX_BULLETS; i++) {
                         if (!bullets[i].active) {
                             bullets[i].active = true;
-                            bullets[i].position = (Vector2){playerPos.x + 120, playerPos.y + 45};
-                            bullets[i].velocity = (Vector2){5.0f, 0}; 
+                            bullets[i].position = (Vector2){playerPos.x + 120, playerPos.y + 45};             
+                            
+                           // fire bullet in direction player is moving
+                           if (IsKeyDown(KEY_D)) 
+                                bullets[i].velocity = (Vector2){5.0f, 0}; 
+                           else if (IsKeyDown(KEY_A)) 
+                                 bullets[i].velocity = (Vector2){-5.0f, 0}; 
+                           else if (IsKeyDown(KEY_W)) 
+                                bullets[i].velocity = (Vector2){0, -5.0f}; 
+                           else if (IsKeyDown(KEY_S))
+                                bullets[i].velocity = (Vector2){0, 5.0f}; 
+                            else
+                                bullets[i].velocity = (Vector2){5.0f, 0}; 
+                            
                             break; // break since we want to do one bullet at a time
                             // we are doing a for loop because we want to check all the bullets in mem that arent active 
                         }
