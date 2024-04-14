@@ -214,6 +214,8 @@ int main(void)
                     }
                 }
                 
+                // TODO: summon mana orbs to track and destroy enemies
+                
                 // Update bullets pos
                 for (int i = 0; i < MAX_BULLETS; i++) {
                     if (bullets[i].active) {
